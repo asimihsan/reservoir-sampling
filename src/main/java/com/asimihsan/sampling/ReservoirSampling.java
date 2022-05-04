@@ -16,7 +16,7 @@ public class ReservoirSampling<T> {
     private final Random random;
 
     /**
-     * Create a reservoir sampler.
+     * Create a reservoir sampler.[
      *
      * @param reservoirSize The size of the fair sample you want to return.
      * @param random Some instance of {@link Random}.
@@ -30,6 +30,9 @@ public class ReservoirSampling<T> {
     /**
      * Call this method when you see an item in your stream. This updates the sampler
      * to maintain an internal fair sample of the stream.
+     *
+     * Implements Algorithm R by Alan Waterman, the simplest but most wasteful reservoir algorithm. Requires a
+     * random number for each element seen in the stream.
      *
      * k = reservoir size
      * n = items seen
